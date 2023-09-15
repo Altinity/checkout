@@ -38,8 +38,9 @@ runs:
         ref: ${{ inputs.ref }}
         token: ${{ inputs.token }}
     - name: debug
-      run: 
-        - ls
+      shell: bash
+      run: |
+        ls
     - name: Checkout submodules
       if: ${{ fromJSON(inputs.submodules) }}
       shell: bash
