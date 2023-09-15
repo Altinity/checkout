@@ -37,6 +37,9 @@ runs:
         fetch-depth: ${{ inputs.fetch-depth }}
         ref: ${{ inputs.ref }}
         token: ${{ inputs.token }}
+    - name: debug
+      run: 
+        - ls
     - name: Checkout submodules
       if: ${{ fromJSON(inputs.submodules) }}
       shell: bash
